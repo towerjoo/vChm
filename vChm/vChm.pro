@@ -13,10 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    userdatamanager.cpp \
+    settingsmanager.cpp
 
 HEADERS  += mainwindow.h \
-    commands.h
+    commands.h \
+    userdatamanager.h \
+    settingsmanager.h
 
 FORMS    += mainwindow.ui
 

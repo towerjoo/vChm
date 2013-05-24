@@ -24,6 +24,8 @@ private:
     Ui::MainWindow *ui;
     MODE mode;
     QString command;
+    bool isContentLoaded;
+    bool isWaitingMoreInput;
 
 private:
     void initVariables();
@@ -32,13 +34,16 @@ private:
     bool isSearch(QChar cmdFlag);
     bool isCmd(QChar cmdFlag);
     void handleCmd();
+    void handleSingleKeyCmd(QChar cmd);
     void handleSearch();
 
+    void loadContentAndShow(const QString fileName);
 protected:
     bool eventFilter(QObject *, QEvent *);
 private slots:
     void on_actionShow_Panel_triggered();
     void on_actionShow_Toolbar_triggered();
+    void on_actionOpen_triggered();
 };
 
 #endif // MAINWINDOW_H
