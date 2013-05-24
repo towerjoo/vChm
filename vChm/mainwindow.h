@@ -36,6 +36,9 @@ private:
 
 protected:
     bool eventFilter(QObject *, QEvent *);
+private slots:
+    void on_actionShow_Panel_triggered();
+    void on_actionShow_Toolbar_triggered();
 };
 
 #endif // MAINWINDOW_H
